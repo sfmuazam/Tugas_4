@@ -7,5 +7,8 @@
 		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
 		<item name="colorAccent">@color/colorAccent</item>
 	</style>
-
+	<!-- Toast Style -->
+	<style name="toastTextStyle" parent="TextAppearance.AppCompat">
+		<item name="android:fontFamily">sans-serif-black</item>
+	</style>
 </resources>
