@@ -43,13 +43,10 @@ public class ProfileActivity extends AppCompatActivity {
         btnVisit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoURL(webpage);
+                Uri uri = Uri.parse(webpage);
+                Intent i = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(i);
             }
         });
-
-    }
-    private void gotoURL(String s){
-        Uri uri = Uri.parse(s);
-        startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
 }
