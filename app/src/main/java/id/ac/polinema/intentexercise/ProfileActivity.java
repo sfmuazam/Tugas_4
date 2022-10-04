@@ -37,7 +37,6 @@ public class ProfileActivity extends AppCompatActivity {
         String about_me = getIntent().getExtras().getString("about_me");
         tvAbout_me.setText(about_me);
         String uri = getIntent().getExtras().getString("foto_profil");
-
         foto_profil.setImageURI(Uri.parse(uri));
 
         btnVisit.setOnClickListener(new View.OnClickListener() {

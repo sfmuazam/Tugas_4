@@ -48,14 +48,6 @@ public class RegisterActivity extends AppCompatActivity {
         foto_profil = findViewById(R.id.imageView);
         profil = findViewById(R.id.image_profile);
 
-        foto_profil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(intent, GALLERY_REQUEST_CODE);
-            }
-        });
-
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,6 +83,15 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
+
+        foto_profil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(intent, GALLERY_REQUEST_CODE);
+            }
+        });
+
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
